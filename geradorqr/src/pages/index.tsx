@@ -31,14 +31,12 @@ const HomePage = () => {
     setText(e.target.value);
   };
 
-
   const handleMarginChange = (margin: number) => {
     setOptions((prevOptions) => ({
       ...prevOptions,
       margin,
     }));
-  }
-  
+  };
 
   const handleScaleChange = (scale: number) => {
     setOptions((prevOptions) => ({
@@ -47,15 +45,12 @@ const HomePage = () => {
     }));
   };
 
- 
-
   const handleWidthChange = (width: number) => {
     setOptions((prevOptions) => ({
       ...prevOptions,
       width,
     }));
   };
-
 
   const handleDarkColorChange = (color: ColorResult) => {
     setOptions((prevOptions) => ({
@@ -113,17 +108,16 @@ const HomePage = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-  
+
   const handleDarkPickerClick = () => {
     setShowLightPicker(false);
     setShowDarkPicker(!showDarkPicker);
   };
-  
+
   const handleLightPickerClick = () => {
     setShowDarkPicker(false);
     setShowLightPicker(!showLightPicker);
   };
-  
 
   return (
     <div className="container mx-auto justify-center flex items-center w-full  h-100%">
@@ -168,10 +162,7 @@ const HomePage = () => {
               id="margin"
               name="margin"
               value={options.margin}
-                  //on change parse margin value to int 
-                                onChange={(e) => handleMarginChange(parseInt(e.target.value))}
-
-
+              onChange={(e) => handleMarginChange(parseInt(e.target.value))}
               className="w-full px-3 py-2 border rounded-md"
             />
           </div>
@@ -274,7 +265,7 @@ const HomePage = () => {
           </div>
           <div className="flex justify-center">
             {text && ( // se text for true ele renderiza o QrCode se não ele não renderiza nada
-              <QrCode text={text}  options={options} />
+              <QrCode text={text} options={options} />
             )}
           </div>
         </div>

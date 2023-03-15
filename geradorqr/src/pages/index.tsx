@@ -168,7 +168,10 @@ const HomePage = () => {
               id="margin"
               name="margin"
               value={options.margin}
-              onChange={handleMarginChange}
+                  //on change parse margin value to int 
+                                onChange={(e) => handleMarginChange(parseInt(e.target.value))}
+
+
               className="w-full px-3 py-2 border rounded-md"
             />
           </div>

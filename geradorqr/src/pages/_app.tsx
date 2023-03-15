@@ -14,6 +14,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/qrgen.svg " />
       </Head>
       <NavBar />
+  
       <Component {...pageProps} />
     </div>
   );

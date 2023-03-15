@@ -2,7 +2,7 @@ import React from 'react';
 import { useQRCode } from 'next-qrcode';
 
 type Props = {
-  text: string;
+  text: string ;
   options?: {
     level?: 'L' | 'M' | 'Q' | 'H';
     margin?: number;
